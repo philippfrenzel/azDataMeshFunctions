@@ -5,3 +5,7 @@ class EventBooking:
     ) -> None:
         self.dataproduct = dataproduct
       
+  def scan(
+    self,
+  ) -> None:
+    pass
