@@ -1,3 +1,5 @@
+import pyodbc
+
 class Dataproduct:
   def __init__(
         self,
@@ -9,5 +11,18 @@ class Dataproduct:
       
   def register(
     self,
+    dataproductName,
+    dataproductSubscription,
+    dataproductRessourcegroup,
+    dataproductStorageAccount
   ) -> None:
-    pass
+    self.dataproductName = dataproductName
+    self.dataproductSubscription = dataproductSubscription
+    self.dataproductRessourcegroup = dataproductRessourcegroup
+    self.dataproductStorageAccount = dataproductStorageAccount
+    
+
+  def getMetadata(
+      self
+    ) -> Other:
+      pass
