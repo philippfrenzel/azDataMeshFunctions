@@ -1,9 +1,15 @@
 class EventBooking:
   def __init__(
         self,
-        dataproduct: str
+        dataproductId: str
     ) -> None:
-        self.dataproduct = dataproduct
+        self.dataproductId = dataproduct
+
+  def getDataproduct(
+        self
+    ) -> None:
+      # fetch the information from the dataproduct manager
+      pass
       
   def scan(
     self,
