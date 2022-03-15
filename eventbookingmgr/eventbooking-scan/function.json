@@ -6,7 +6,7 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "route": "tasks",
+      "route": "scan",
       "methods": [
         "get"
       ]
