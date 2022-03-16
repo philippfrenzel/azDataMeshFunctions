@@ -21,7 +21,6 @@ class Dataproduct:
     self.dataproductRessourcegroup = dataproductRessourcegroup
     self.dataproductStorageAccount = dataproductStorageAccount
     
-
   def getMetadata(
       self
     ) -> Other:

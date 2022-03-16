@@ -10,3 +10,8 @@ Basic Authentification is set by default within the project.
 
 ### eventbooking-scan
 
+## Testing
+
+Testing is implemented via pytest. -> https://docs.pytest.org/en/7.1.x/
+
+After you have installed the package, you can just run pytest in the commandline and the tests from the test folder are beeing executed.

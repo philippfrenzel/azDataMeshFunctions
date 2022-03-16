@@ -1,6 +1,6 @@
 # Service Classes
 
-## EventBookingManager
+## Event Booking Manager
 
 
 

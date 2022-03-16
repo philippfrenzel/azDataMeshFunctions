@@ -1,6 +1,6 @@
 # Service Classes
 
-## DataProductManager
+## Data Product Manager
 
 
 

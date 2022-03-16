@@ -3,7 +3,7 @@ class EventBooking:
         self,
         dataproductId: str
     ) -> None:
-        self.dataproductId = dataproduct
+        self.dataproductId = dataproductId
 
   def getDataproduct(
         self
