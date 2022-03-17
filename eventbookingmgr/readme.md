@@ -1,5 +1,9 @@
 # Event Booking Manager
 
+## General
+
+
+
 ## Security
 
 -> https://github.com/Azure-Samples/active-directory-python-external-identities-api-connector-azure-function-validate

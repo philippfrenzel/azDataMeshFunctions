@@ -7,3 +7,4 @@ azure-functions
 pyodbc
 python-dotenv
 pytest
+logging
