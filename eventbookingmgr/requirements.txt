@@ -4,6 +4,7 @@
 
 wheel
 azure-functions
+azure-identity
 pyodbc
 python-dotenv
 pytest
