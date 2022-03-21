@@ -7,3 +7,11 @@ def eventRegisterDataproduct(dataproductId,dataproductName):
 
 def test_eventRegisterDataproduct():
     assert eventRegisterDataproduct('DataProduct1', 'Unser erstes Datenprodukt') == None
+
+def eventGetMetadata(dataproductId):
+    dataproduct = Dataproduct(dataproductId)
+    dataproduct.getMetadata()
+    pass
+
+def test_eventGetMetadata():
+    assert eventGetMetadata('DataProduct1') == None

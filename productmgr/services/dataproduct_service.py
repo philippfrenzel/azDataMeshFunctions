@@ -1,6 +1,7 @@
 import pyodbc
 import os
 import logging
+import json
 
 class Dataproduct:
   def __init__(
@@ -29,8 +30,21 @@ class Dataproduct:
     self.dataproductSubscription = dataproductSubscription
     self.dataproductRessourcegroup = dataproductRessourcegroup
     self.dataproductStorageAccount = dataproductStorageAccount
+    location_record = (self.dataproductId, self.dataproductSubscription, self.dataproductRessourcegroup, self.dataproductStorageAccount)
+    location_sql = """INSERT INTO dbo.dataproduct_location ([FKDataproductId], [SubscriptionId], [RessourceGroupId], [StorageAccountId]) VALUES (?, ?, ?, ?) """
+    with pyodbc.connect(os.environ['SQLAZURECONNSTR_WWIF']) as conn:
+        with conn.cursor() as cursor:
+            cursor.execute(location_sql,location_record)
     
   def getMetadata(
       self
-    ) -> None:
-      pass
+    ):
+      data = []
+      location_sql = """SELECT [FKDataproductId], [SubscriptionId], [RessourceGroupId], [StorageAccountId] FROM dbo.dataproduct_location WHERE [FKDataproductId] = ? """
+      with pyodbc.connect(os.environ['SQLAZURECONNSTR_WWIF']) as conn:
+        with conn.cursor() as cursor:
+            rows = cursor.execute(location_sql,self.dataproductId).fetchall()
+            for row in rows:
+                data.append([x for x in row])
+      print(json.dumps(data))
+      return json.dumps(data)
