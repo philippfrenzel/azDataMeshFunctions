@@ -33,3 +33,9 @@ The Data Product Manager is responsible for holding the current state and locati
 
 ## Event Booking Manager
 
+# Security
+
+## Basic Concept
+
+-> https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-python
+

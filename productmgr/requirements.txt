@@ -4,6 +4,8 @@
 
 wheel
 azure-functions
+azure-identity
+azure-keyvault-secrets
 pyodbc
 python-dotenv
 pytest
