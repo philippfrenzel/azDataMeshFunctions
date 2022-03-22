@@ -1,18 +1,16 @@
-from services.keyvault_service import azKeyVault
+from services.keyvault_service import KeyVault
 
-def objKeyvault(keyVaultName):
-    azkeyvault = azKeyVault(keyVaultName)
-    pass
-
-def test_objKeyvault():
-    assert objKeyvault('MyKeyVault') == None
-
-def getSecret(keyVaultName, secretName):
-    azkeyvault = azKeyVault(keyVaultName)
-    azkeyvault.getSecret(secretName)
-    pass
+def objKeyvault(clientId, keyVaultName, keyVaultSecret, tenantId):
+    keyVaultUri = f"https://{keyVaultName}.vault.azure.net"
+    return KeyVault(
+        clientId,
+        keyVaultUri,
+        keyVaultSecret,
+        tenantId
+    )
 
 def test_getSecret():
-    assert eventBookingScan("MyKeyVault", "MyTestSecret") == None
+    assert objKeyvault('MyKeyVault') == None
+
 
 
