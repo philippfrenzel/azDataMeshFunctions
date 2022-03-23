@@ -18,6 +18,9 @@ Set your env variables:
 
 ```bash
 $Env:SQLAZURECONNSTR_WWIF="Driver={ODBC Driver 17 for SQL Server};Server=tcp:{server}.database.windows.net,1433;Database={database};UID={username};Authentication=ActiveDirectoryInteractive;"
+$Env:AZURE_CLIENT_ID="<azClientId>"
+$Env:AZURE_TENANT_ID="<azTenantId>"
+$Env:AZURE_STORAGE_CONNECTION_STRING="<azTenantId>"
 ```
 
 # Event Booking Manager

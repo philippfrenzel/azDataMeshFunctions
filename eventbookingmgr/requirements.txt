@@ -3,11 +3,11 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 wheel
+azure-common
 azure-functions
 azure-identity
 azure-keyvault-secrets
-azure-keyvault
-azure-common
+azure-storage-blob
 pyodbc
 python-dotenv
 pytest

@@ -33,6 +33,14 @@ The Data Product Manager is responsible for holding the current state and locati
 
 ## Event Booking Manager
 
+# Testing
+
+Tests are written using pytest. You can run the tests by calling:
+
+```bash
+pytest --capture=tee-sys
+```
+
 # Security
 
 ## Basic Concept

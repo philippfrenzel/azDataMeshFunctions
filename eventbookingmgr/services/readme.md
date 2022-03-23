@@ -10,3 +10,16 @@ Specification Initial Draft (POC):
 
 
 ## ...
+
+
+# Helpers
+
+## Azure Identity
+
+https://azuresdkdocs.blob.core.windows.net/$web/python/azure-identity/1.8.0/index.html
+
+## Azure Storage Blob
+
+-> https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python?tabs=environment-variable-windows
+-> https://docs.microsoft.com/en-us/samples/azure/azure-sdk-for-python/storage-blob-samples/
+

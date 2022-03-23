@@ -1,15 +1,17 @@
 from services.eventbooking_service import EventBooking
 
-def eventBooking(dataproductId):
-    eventbooking = EventBooking(dataproductId)
-
-def test_eventBooking():
-    assert eventBooking('DataProduct1') == None
-
 def eventBookingScan(dataproductId):
     eventbooking = EventBooking(dataproductId)
     eventbooking.setScan()
 
 def test_eventBookingScan():
-    assert eventBookingScan('DataProduct1') == None
+    print("Testing DPNYTaxi")
+    assert eventBookingScan('DPNYTaxi') == None
 
+def eventBookingBlobInContainer(dataproductId):
+    eventbooking = EventBooking(dataproductId)
+    eventbooking.getBlobsInContainer()
+
+def test_eventBookingScan():
+    print("Testing DPNYTaxi Blob Listing")
+    assert eventBookingBlobInContainer('DPNYTaxi') == None

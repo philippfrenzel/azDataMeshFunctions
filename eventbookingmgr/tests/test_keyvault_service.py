@@ -1,16 +1,19 @@
 from services.keyvault_service import KeyVault
 
-def objKeyvault(clientId, keyVaultName, keyVaultSecret, tenantId):
-    keyVaultUri = f"https://{keyVaultName}.vault.azure.net"
-    return KeyVault(
-        clientId,
-        keyVaultUri,
-        keyVaultSecret,
-        tenantId
-    )
+def objKeyvault(keyVaultName):
+    KeyVault(keyVaultName)
+    pass
+
+def test_objKeyvault():
+    assert objKeyvault('kv1234567pplay') == None
+
+
+def getSecret(keyVaultName,secret):
+    KVault = KeyVault(keyVaultName)
+    KVault.getSecret(secret)
 
 def test_getSecret():
-    assert objKeyvault('MyKeyVault') == None
+    assert getSecret('kv1234567pplay',"pytest") == None
 
 
 
