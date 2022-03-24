@@ -25,15 +25,3 @@ Connection String should be added to the env on Windows:
 ```bash
 $Env:SQLAZURECONNSTR_WWIF="Driver={ODBC Driver 17 for SQL Server};Server=tcp:{server}.database.windows.net,1433;Database={database};UID={username};Authentication=ActiveDirectoryInteractive;"
 ```
-
-# Datastructure
-
-## Table dataproduct_dependencies
-
-| Attribute   | Description |
-| ----------- | ----------- |
-| FKDataproductId | The ID of the dataproduct - must be unique within the environment |
-| Relation | Relation Type can be "UPSTREAM" or "DOWNSTREAM" |
-| DataproductId | The ID of the related dataproduct |
-| Status | Status of the relation can be "ACTIVE" or "INACTIVE" |
-| CreatedAt | Creation Timestamp of the relation |

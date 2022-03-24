@@ -27,7 +27,6 @@ $Env:AZURE_STORAGE_CONNECTION_STRING="<azTenantId>"
 
 ## General
 
-
 ## Security
 
 -> https://github.com/Azure-Samples/active-directory-python-external-identities-api-connector-azure-function-validate
@@ -43,3 +42,15 @@ Basic Authentification is set by default within the project.
 Testing is implemented via pytest. -> https://docs.pytest.org/en/7.1.x/
 
 After you have installed the package, you can just run pytest in the commandline and the tests from the test folder are beeing executed.
+
+# Datastructure
+
+## Table dataproduct_dependencies
+
+| Attribute   | Description |
+| ----------- | ----------- |
+| FKDataproductId | The ID of the dataproduct - must be unique within the environment |
+| Relation | Relation Type can be "UPSTREAM" or "DOWNSTREAM" |
+| DataproductId | The ID of the related dataproduct |
+| Status | Status of the relation can be "ACTIVE" or "INACTIVE" |
+| CreatedAt | Creation Timestamp of the relation |
