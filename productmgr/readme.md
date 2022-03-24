@@ -10,6 +10,10 @@ container
 /dpsource
 /dpmeta
 
+Here a quick draft on how the storage containers are used:
+
+![data mesh storage concept](https://github.com/philippfrenzel/azDataMeshFunctions/blob/main/productmgr/azDataMeshDPStorage.drawio.png)
+
 ## dpcore
 
 Here we expect each dataproduct to exist as a parquet file(s).
