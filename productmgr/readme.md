@@ -1,5 +1,31 @@
 # Data Product Manager
 
+# Storage Structure
+
+To have a fixed starting and endpoint, each dataproduct has a representation within a storage account. The layers that are created by default within a azure data lake storage gen2:
+
+container
+/dpcore
+/dpoutputport
+/dpsource
+/dpmeta
+
+## dpcore
+
+Here we expect each dataproduct to exist as a parquet file(s).
+
+## dpoutputport
+
+All filebased outputports are placed within this folder.
+
+## dpsource
+
+Can be used for internal processing - not exposed outside of the dataproduct.
+
+## dpmeta
+
+Product Metadata as JSON-Format.
+
 # Datastructure
 
 ## Table dataproduct
