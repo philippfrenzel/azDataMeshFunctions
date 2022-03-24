@@ -55,7 +55,6 @@ class EventBooking:
     blob_client = container_client.get_blob_client(filename)
     try:
         download_stream = blob_client.download_blob()
-        print(download_stream)
         product_metadata = json.loads(download_stream.readall().decode("utf-8"))
         print(json.dumps(product_metadata))
     except ResourceNotFoundError:
