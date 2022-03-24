@@ -10,10 +10,10 @@ def test_objKeyvault():
 
 def getSecret(keyVaultName,secret):
     KVault = KeyVault(keyVaultName)
-    KVault.getSecret(secret)
+    return KVault.getSecret(secret)
 
 def test_getSecret():
-    assert getSecret('kv1234567pplay',"pytest") == None
+    assert getSecret('kv1234567pplay',"pytest") == "esklappt"
 
 
 

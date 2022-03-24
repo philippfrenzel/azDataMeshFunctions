@@ -46,22 +46,21 @@ class EventBooking:
     containername = "dpcore"
     filename = f"{self.dataproductId}/product-metadata.json"
     account_uri = f"https://{storageAccountName}.blob.core.windows.net/"
+    # will scan the storage account core folder for the meta.json file
+    print("Connecting to: " + account_uri + " to open file " + filename)
+    blob_service_client = BlobServiceClient(account_url=account_uri, credential=credential)
+    # Instantiate a new ContainerClient
+    container_client = blob_service_client.get_container_client(containername)
+    # Instantiate a new BlobClient
+    blob_client = container_client.get_blob_client(filename)
     try:
-        # will scan the storage account core folder for the meta.json file
-        blob_service_client = BlobServiceClient(account_url=account_uri, credential=credential)
-        # Instantiate a new ContainerClient
-        container_client = blob_service_client.get_container_client(containername)
-        # Instantiate a new BlobClient
-        blob_client = container_client.get_blob_client(filename)
-        try:
-            download_stream = blob_client.download_blob()
-            product_metadata = json.loads(download_stream.readall().decode("utf-8"))
-            print("\t" + product_metadata)
-        except ResourceNotFoundError:
-            print("No blob found.")
-    except Exception as e:
-      print(e)
-
+        download_stream = blob_client.download_blob()
+        print(download_stream)
+        product_metadata = json.loads(download_stream.readall().decode("utf-8"))
+        print(json.dumps(product_metadata))
+    except ResourceNotFoundError:
+        print("No blob found.")
+    
   def setUpstreamTrigger(
     self,
   ) -> None:
