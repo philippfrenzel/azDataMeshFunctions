@@ -12,3 +12,4 @@ pyodbc
 python-dotenv
 pytest
 logging
+sqlalchemy

@@ -1,4 +1,4 @@
-from services.eventbooking_service import EventBooking
+from models.eventbooking_service import EventBooking
 
 def eventBookingBlobInContainer(dataproductId):
     eventbooking = EventBooking(dataproductId)

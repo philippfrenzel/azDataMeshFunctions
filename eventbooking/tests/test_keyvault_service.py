@@ -1,4 +1,4 @@
-from services.keyvault_service import KeyVault
+from models.keyvault_service import KeyVault
 
 def objKeyvault(keyVaultName):
     KeyVault(keyVaultName)
