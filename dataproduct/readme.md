@@ -12,7 +12,7 @@ container
 
 Here a quick draft on how the storage containers are used:
 
-![data mesh storage concept](https://github.com/philippfrenzel/azDataMeshFunctions/blob/main/productmgr/azDataMeshDPStorage.drawio.png)
+![data mesh storage concept](https://github.com/philippfrenzel/azDataMeshFunctions/blob/main/dataproduct/azDataMeshDPStorage.drawio.png)
 
 ## dpcore
 
