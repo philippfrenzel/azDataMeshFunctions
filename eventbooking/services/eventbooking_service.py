@@ -1,6 +1,8 @@
-from azure.identity import DefaultAzureCredential
 import json
 import os
+
+from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+from azure.identity import DefaultAzureCredential    
 
 class EventBooking:
   def __init__(
@@ -16,7 +18,6 @@ class EventBooking:
       pass
   
   def getBlobsInContainer(self):
-    from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
     # DefaultAzureCredential -> greift auf Managed Identity die im System hinterlegt ist zu
     # Maneged Identity (e.g. azure function app) (runtime)
     credential = DefaultAzureCredential()
@@ -37,7 +38,6 @@ class EventBooking:
       print(e)
   
   def setScan(self):
-    from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
     # DefaultAzureCredential -> greift auf Managed Identity die im System hinterlegt ist zu
     # Maneged Identity (e.g. azure function app) (runtime)
     credential = DefaultAzureCredential()
