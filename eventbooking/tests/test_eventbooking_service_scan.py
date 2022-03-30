@@ -1,4 +1,4 @@
-from models.eventbooking_service import EventBooking
+from services.eventbooking_service import EventBooking
 
 def eventBookingScan(dataproductId):
     eventbooking = EventBooking(dataproductId)

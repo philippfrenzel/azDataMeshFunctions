@@ -8,6 +8,7 @@ azure-functions
 azure-identity
 azure-keyvault-secrets
 azure-storage-blob
+jsonschema
 pyodbc
 python-dotenv
 pytest

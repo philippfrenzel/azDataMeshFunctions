@@ -17,7 +17,7 @@ engine = create_engine(connection_url)
 
 Base = declarative_base()
 
-class EventBooking(Base):
+class EventBookingEntity(Base):
   __tablename__ = "eventbooking"
   
   id = Column(Integer(), primary_key=True)
@@ -28,11 +28,8 @@ class EventBooking(Base):
   Status          = Column(String, nullable=False)
   created_at      = Column(DateTime(timezone=True), nullable=False, default=func.now())
   updated_at      = Column(DateTime, default=str("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"))
-  
-  def __repr__(self):
-        return f"Dataproduct(RootDataproduct={self.FKDataproductId!r}, relation={self.Relation!r}, ChildDataproduct={self.DataproductId!r})"
 
-  def validate_json(self,json):
+  def validate_json(self,json_body):
      schema = {
         'type': 'object',
         'properties': {
@@ -77,6 +74,6 @@ class EventBooking(Base):
         schema, types={"float": float}, format_checker=format_checker
      )
 
-     return my_validator.validate(json)
+     return my_validator.validate(json_body)
 
 Base.metadata.create_all(engine)
