@@ -15,8 +15,8 @@ engine = create_engine(connection_url)
 
 Base = declarative_base()
 
-class DataproductDependencyModel(Base):
-  __tablename__ = "dataproduct_dependencies"
+class EventBooking(Base):
+  __tablename__ = "eventbooking"
   
   id = Column(Integer(), primary_key=True)
   
